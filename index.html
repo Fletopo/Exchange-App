@@ -30,9 +30,9 @@
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* Separar elementos */
             align-items: center;
-            padding: 15px;
+            padding: 10px 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
@@ -40,8 +40,14 @@
             z-index: 1000;
         }
 
+        header img {
+            max-height: 60px; /* Ajustar altura máxima */
+            height: auto; /* Mantener proporción */
+            width: auto; /* Mantener proporción */
+        }
+
         header h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #333;
         }
 
@@ -145,6 +151,19 @@
                 padding: 0.5rem 1rem; /* Ajustar tamaño del botón */
                 font-size: 0.85rem;
             }
+            header {
+                flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+                align-items: center; /* Centrar contenido */
+                padding: 10px;
+            }
+
+            header img {
+                max-height: 50px; /* Reducir altura en móviles */
+            }
+
+            header h1 {
+                font-size: 1.2rem; /* Reducir tamaño del texto */
+            }
         }
 
         @media (max-width: 480px) {
@@ -168,12 +187,26 @@
                 padding: 0.4rem 0.8rem;
                 font-size: 0.75rem; /* Reducir más el botón */
             }
+            header {
+                flex-direction: column; /* Mantener diseño en columna */
+                align-items: center;
+                padding: 5px;
+            }
+
+            header img {
+                max-height: 40px; /* Reducir más la altura */
+            }
+
+            header h1 {
+                font-size: 1rem; /* Reducir más el tamaño del texto */
+            }
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>TelocambioApp</h1>
+    <img src="./img/Sin título.jpg" alt="logo app" style="width: 40; height: 40;">
+    <img src="./img/Sin título2.jpg" alt="title app" style="width: 40; height: 40;">
 </header>
 
 <div class="content-wrapper">
